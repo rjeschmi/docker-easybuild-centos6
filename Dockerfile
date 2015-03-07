@@ -6,7 +6,7 @@ RUN sed "/^mirrorlist/s/^/#/" -i /etc/yum.repos.d/CentOS-Base.repo
 RUN sed "/^#baseurl/s/^#//" -i /etc/yum.repos.d/CentOS-Base.repo
 RUN useradd -m build
 
-RUN yum -y install git tar which bzip2 \
+RUN yum -y install git tar which bzip2 xz \
             epel-release make automake gcc gcc-c++ patch
 RUN mkdir -p /build
 WORKDIR /build
@@ -36,6 +36,8 @@ ADD build/z99_StdEnv.sh /etc/profile.d/z99_StdEnv.sh
 RUN mkdir -p /export/easybuild
 RUN useradd -u 1000 easybuild
 RUN chown -R easybuild.easybuild /export
+
+RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip
 
 ADD ./easybuild-docker.sh /usr/bin/easybuild-docker
 RUN chmod +x /usr/bin/easybuild-docker
