@@ -28,17 +28,6 @@ github_clone_branch()
     echo "=== Cloning ${GITHUB_USERNAME}/${REPO} ... in ${INSTALL_DIR}"
     git clone --branch master https://github.com/${GITHUB_USERNAME}/${REPO}.git
 
-    echo "=== Adding and fetching HPC-UGent GitHub repository @ hpcugent/{$REPO} ..."
-    cd "${REPO}"
-    git remote add "github_hpcugent" "https://github.com/hpcugent/${REPO}.git"
-    git fetch github_hpcugent
-    
-    # If branch is not 'master', track and checkout it
-    if [ "$BRANCH" != "master" ] ; then
-        echo "=== Checking out the '${BRANCH}' branch ..."
-        git branch --track "${BRANCH}" "github_hpcugent/${BRANCH}"
-        git checkout "${BRANCH}"
-    fi
 }
 
 # Print the content of the module

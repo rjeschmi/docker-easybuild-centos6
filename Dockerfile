@@ -8,7 +8,7 @@ RUN chown -R build.build /software
 RUN mkdir -p /software/easybuild-develop
 ADD build/install-EasyBuild-fpm.sh /build/install-EasyBuild-fpm.sh
 RUN chmod +x /build/install-EasyBuild-fpm.sh
-RUN /build/install-EasyBuild-develop.sh rjeschmi /software/easybuild-develop
+RUN /build/install-EasyBuild-fpm.sh rjeschmi /software/easybuild-develop
 
 ADD build/z99_StdEnv.sh /etc/profile.d/z99_StdEnv.sh
 
