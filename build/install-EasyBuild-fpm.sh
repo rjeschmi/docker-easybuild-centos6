@@ -26,7 +26,7 @@ github_clone_branch()
 
     cd "${INSTALL_DIR}"
     echo "=== Cloning ${GITHUB_USERNAME}/${REPO} ... in ${INSTALL_DIR}"
-    git clone --branch master https://github.com/${GITHUB_USERNAME}/${REPO}.git
+    git clone --branch ${BRANCH} https://github.com/${GITHUB_USERNAME}/${REPO}.git
 
 }
 
