@@ -30,9 +30,11 @@ VOLUME /export/easybuild
 VOLUME /software/easybuild-develop
 
 USER root
-RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip rpm-build ruby ruby-devel rubygems
+RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip rpm-build createrepo
 
-RUN gem install fpm
+
+RUN su -l -c 'eb Ruby-2.1.5.eb --prefix=/software/easybuild --robot' - build
+RUN su -l -c 'eb Ruby-FPM-2.1.5-1.0.0.eb --prefix=/software/easybuild --robot' - build
 
 USER easybuild
 

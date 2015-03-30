@@ -102,8 +102,8 @@ github_clone_branch "vsc-base"   "master"
 
 # Clone code repositories with the 'develop' branch
 github_clone_branch "easybuild-framework"   "feature_package_step_w_fpm"
-github_clone_branch "easybuild-easyblocks"  "develop"
-github_clone_branch "easybuild-easyconfigs" "develop"
+github_clone_branch "easybuild-easyblocks"  "ruby-ext-gem"
+github_clone_branch "easybuild-easyconfigs" "ruby-foss-fpm"
 
 # Clone base repository with the 'master' branch
 github_clone_branch "easybuild" "master"
