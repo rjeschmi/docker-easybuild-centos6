@@ -27,6 +27,7 @@ USER easybuild
 WORKDIR /export/easybuild
 
 VOLUME /export/easybuild
+VOLUME /software/easybuild-devleop
 
 USER root
 RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip
