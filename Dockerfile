@@ -7,9 +7,13 @@ ADD build/config.cfg /software/config/config.cfg
 RUN chown -R easybuild.easybuild /software
 
 RUN mkdir -p /software/easybuild-develop
+RUN mkdir -p /software/easybuild/modules
 ADD build/install-EasyBuild-develop.sh /build/install-EasyBuild-develop.sh
 RUN chmod +x /build/install-EasyBuild-develop.sh
+
+
 RUN /build/install-EasyBuild-develop.sh hpcugent /software/easybuild-develop
+
 
 ADD build/z99_StdEnv.sh /etc/profile.d/z99_StdEnv.sh
 
