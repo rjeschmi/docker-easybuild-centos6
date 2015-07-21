@@ -7,7 +7,7 @@ ADD build/config.cfg /software/config/config.cfg
 RUN chown -R easybuild.easybuild /software
 
 RUN mkdir -p /software/easybuild-develop
-RUN mkdir -p /software/easybuild/modules
+RUN mkdir -p /software/easybuild/modules/all
 ADD build/install-EasyBuild-develop.sh /build/install-EasyBuild-develop.sh
 RUN chmod +x /build/install-EasyBuild-develop.sh
 
