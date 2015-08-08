@@ -30,7 +30,7 @@ VOLUME /export/easybuild
 VOLUME /software/easybuild-develop
 
 USER root
-RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip
+RUN yum -y install python-keyring zlib-devel openssl-devel libibverbs-devel unzip rpm-build
 
 USER easybuild
 
