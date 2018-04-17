@@ -4,7 +4,7 @@ docker-easybuild-centos6
 This is just [EasyBuild](https://hpcugent.github.io/easybuild/) in a CentOS image. When you start it up eb should be in your path by default.
 
 ```
-$ docker run --user="build" -ti rjeschmi/easybuild-centos6 /bin/bash
+$ docker run --user="easybuild" -ti rjeschmi/easybuild-centos6 /bin/bash
 ```
 
 The --rm option removes the container when it exits. You will lose all your work, but if you were just testing something that is probably ok.
